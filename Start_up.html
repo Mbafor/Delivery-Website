@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRHA JEPH'S DELIVERY</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="brand">Jeph Logistics</div>
+    <nav class="nav-links">
+      <a href="Start_up.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your Trusted Delivery Partner</h1>
+      <p>Fast, Reliable, and Affordable Delivery Services in Kete-Krachi</p>
+      <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'});">
+        Book a Delivery
+      </button>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="images/Dilivery.jpg" alt="Parcel Delivery">
+        <h3>Parcel Delivery</h3>
+        <p>Safe and fast delivery of your packages within town.</p>
+         <a href="about.html" class="read-more">Read More →</a>
+      </div>
+      <div class="service-card">
+        <img src="images/main.jpg" alt="Food Delivery">
+        <h3>Food Delivery</h3>
+        <p>Quick delivery from your favorite restaurants to your doorstep.</p>
+         <a href="about.html" class="read-more">Read More →</a>
+      </div>
+      <div class="service-card">
+        <img src="images/di.jpg" alt="Transportation">
+        <h3>Transportation</h3>
+        <p>Reliable transport services for goods and personal needs.</p>
+         <a href="about.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+  </section>
+
+<!-- Booking Form -->
+<section id="booking" class="booking">
+  <h2>Book a Delivery</h2>
+  <form onsubmit="sendToWhatsApp(event)">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="address">Pickup Address</label>
+    <input type="text" id="address" name="address" required>
+
+    <label for="destination">Delivery Destination</label>
+    <input type="text" id="destination" name="destination" required>
+
+    <label for="service">Service Type</label>
+    <select id="service" name="service" required>
+      <option value="Parcel Delivery">Parcel Delivery</option>
+      <option value="Food Delivery">Food Delivery</option>
+      <option value="Transportation">Transportation</option>
+    </select>
+
+    <label for="details">Package Details</label>
+    <textarea id="details" name="details" rows="4"></textarea>
+
+    <button type="submit">Submit Request</button>
+  </form>
+</section>
+
+<script>
+  function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let address = document.getElementById("address").value;
+    let destination = document.getElementById("destination").value;
+    let service = document.getElementById("service").value;
+    let details = document.getElementById("details").value;
+
+    // Your WhatsApp number (country code + number, no "+")
+    let whatsappNumber = "233559306768"; 
+
+    // Build message
+    let message = 
+      " *New Delivery Request* \n\n" +
+      "Name: " + name + "\n" +
+      "Phone: " + phone + "\n" +
+      "Pickup Address: " + address + "\n" +
+      "Destination: " + destination + "\n" +
+      "Service Type: " + service + "\n" +
+      "Package Details: " + details;
+
+    // Encode safely
+    let encodedMessage = encodeURIComponent(message);
+
+    // WhatsApp URL
+    let url = "https://wa.me/" + whatsappNumber + "?text=" + encodedMessage;
+
+    window.open(url, "_blank").focus();
+  }
+</script>
+
+  <!-- Footer -->
+<footer class="footer" id="contact">
+  <div class="footer-grid">
+    <!-- Quick Links -->
+    <div>
+      <h3>Quick Links</h3>
+      <a href="Start_up.html">Home</a><br>
+      <a href="about.html">About</a><br>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3>Contact</h3>
+      <p>📞 <a href="tel:+233245447334">024 544 7334</a></p>
+      <p>💬 <a href="https://wa.me/233559306768" target="_blank">Chat on WhatsApp</a></p>
+    </div>
+
+    <!-- Social Media -->
+    <div>
+      <h3>Follow Us</h3>
+      <p>
+        🌍 
+        <a href="https://facebook.com/" target="_blank">Facebook</a> | 
+        <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=pa2thu0/" target="_blank">Instagram</a> | 
+        <a href="https://www.tiktok.com/@brhajeph?_t=ZM-8zL4sgwUHjU&_r=1/" target="_blank">Tiktok</a>
+      </p>
+    </div>
+  </div>
+
+  <p class="copyright">© 2025 BRHA JEPH'S DELIVERY - All Rights Reserved</p>
+</footer>
+
+
+</body>
+</html>
