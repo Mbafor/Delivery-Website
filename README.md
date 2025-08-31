@@ -13,20 +13,7 @@ The site includes sections for **Home, About, Services, and Contact**, with a Wh
 - ⚡ **Fast & Lightweight** – Pure HTML, CSS, and JavaScript (no heavy frameworks).  
 - 🔗 **Footer with Quick Links** – Social media, contact numbers, and useful navigation.  
 
-## 📂 Project Structure
-
-├── index.html         # Homepage
-├── about.html         # About page
-├── services.html      # Services page
-├── contact.html       # Contact page
-├── css/
-│   └── style.css      # Main stylesheet
-├── images/            # Hero and service images
-├── js/
-│   └── script.js      # Form & interactivity
-└── README.md          # Project documentation
-
-## ⚙️ Installation
+## Installation
 
 1. Clone or download this repository:
    ```bash
@@ -38,7 +25,7 @@ The site includes sections for **Home, About, Services, and Contact**, with a Wh
    ```
 3. Open `index.html` in your browser.
 
-## 📝 Usage
+## Usage
 
 * Navigate through pages using the header menu.
 * Fill out the delivery form with:
@@ -50,10 +37,7 @@ The site includes sections for **Home, About, Services, and Contact**, with a Wh
   * Package Details
 * Click **Submit** → It redirects to WhatsApp with the filled details sent to the business number.
 
-## 📱 Contact
 
-* 📞 Phone: `0245447334`
-* 💬 WhatsApp: `0559306768`
-* 🌍 Socials: [Facebook](#) | [Instagram](#) | [Twitter](#)
+
 
 
