@@ -1,13 +1,9 @@
-Got it 👍
-Here’s a **README.md** file you can use for your delivery website project. It’s simple, structured, and gives anyone looking at your code a clear understanding of your project.
 
-```markdown
-# 🚚 BRHA Jeph's Delivery Website
+#  BRHA Jeph's Delivery Website  --- (https://jephlogistics.vercel.app/)
 
 A responsive delivery service website built with **HTML, CSS, and JavaScript**.  
 The site includes sections for **Home, About, Services, and Contact**, with a WhatsApp-integrated form for easy communication.
 
----
 
 ## ✨ Features
 
@@ -17,11 +13,7 @@ The site includes sections for **Home, About, Services, and Contact**, with a Wh
 - ⚡ **Fast & Lightweight** – Pure HTML, CSS, and JavaScript (no heavy frameworks).  
 - 🔗 **Footer with Quick Links** – Social media, contact numbers, and useful navigation.  
 
----
-
 ## 📂 Project Structure
-
-```
 
 ├── index.html         # Homepage
 ├── about.html         # About page
@@ -34,31 +26,22 @@ The site includes sections for **Home, About, Services, and Contact**, with a Wh
 │   └── script.js      # Form & interactivity
 └── README.md          # Project documentation
 
-````
-
----
-
 ## ⚙️ Installation
 
 1. Clone or download this repository:
    ```bash
    git clone https://github.com/yourusername/delivery-website.git
 ````
-
 2. Open the project folder:
-
    ```bash
    cd delivery-website
    ```
 3. Open `index.html` in your browser.
 
----
-
 ## 📝 Usage
 
 * Navigate through pages using the header menu.
 * Fill out the delivery form with:
-
   * Full Name
   * Phone Number
   * Pickup Address
@@ -67,17 +50,10 @@ The site includes sections for **Home, About, Services, and Contact**, with a Wh
   * Package Details
 * Click **Submit** → It redirects to WhatsApp with the filled details sent to the business number.
 
----
-
 ## 📱 Contact
 
 * 📞 Phone: `0245447334`
 * 💬 WhatsApp: `0559306768`
 * 🌍 Socials: [Facebook](#) | [Instagram](#) | [Twitter](#)
 
----
-
-## 📄 License
-
-This project is open-source and free to use under the **MIT License**.
 
