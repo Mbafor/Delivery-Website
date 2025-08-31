@@ -62,7 +62,7 @@ body {
   width: 100%;
   height: 100vh;
   background: url("Images/hero.jpg") no-repeat top center;
-  background-size: cover;
+  background-size: cover; /* Desktop default */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,9 +253,34 @@ body {
 
 @media (max-width: 768px) {
   .navbar { flex-direction: column; gap: 10px; padding: 15px 20px; }
-  .hero { height: 80vh; }
-  .hero h1 { font-size: 2rem; }
-  .hero p { font-size: 0.9rem; }
+  
+  .hero {
+    background-size: contain;     /* Show entire image */
+    background-position: top;     /* Keep head visible */
+    height: 100vh;                /* Full screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 0.95rem; }
+
+  .hero button {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+    border-radius: 4px;
+    max-width: 200px;
+    width: auto;
+  }
+
   .services { padding: 40px 20px; }
   .service-grid { grid-template-columns: 1fr; }
   .booking { padding: 40px 20px; }
@@ -264,3 +289,9 @@ body {
   .footer-grid { grid-template-columns: 1fr; text-align: center; }
 }
 
+@media (max-width: 400px) {
+  .hero button {
+    font-size: 0.8rem;
+    padding: 8px 15px;
+  }
+}
