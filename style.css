@@ -255,7 +255,7 @@ body {
 
 @media (max-width: 768px) {
   .navbar { flex-direction: column; gap: 10px; padding: 15px 20px; }
-  .hero { height: 100vh; }
+  .hero { height: 120vh; }
   .hero h1 { font-size: 2rem; }
   .hero p { font-size: 0.9rem; }
   .services { padding: 40px 20px; }
