@@ -95,7 +95,9 @@ body {
   margin-bottom: 30px;
 }
 
-.hero button {
+.hero button,
+.hero a {
+  display: inline-block;
   padding: 12px 25px;
   border: none;
   background: var(--primary-color);
@@ -103,10 +105,13 @@ body {
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none; /* makes links look like buttons */
   transition: background var(--transition), transform 0.2s;
+  margin: 5px; /* small gap between buttons */
 }
 
-.hero button:hover {
+.hero button:hover,
+.hero a:hover {
   background: var(--text-light);
   transform: scale(1.05);
 }
@@ -258,6 +263,13 @@ body {
   .hero { height: 120vh; }
   .hero h1 { font-size: 2rem; }
   .hero p { font-size: 1.3rem; }
+  .hero button,
+  .hero a {
+    display: block;
+    width: 100%;
+    max-width: 250px; /* keeps them from stretching too wide */
+    margin: 10px auto; /* center align */
+  }
   .services { padding: 40px 20px; }
   .service-grid { grid-template-columns: 1fr; }
   .booking { padding: 40px 20px; }
