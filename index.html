@@ -8,19 +8,24 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="brand">Jeph Logistics</div>
+<!-- Navbar -->
+<header class="navbar">
+  <div class="brand">Jeph Logistics</div>
 
-      <!-- Hamburger icon (mobile) -->
-  <div class="menu-toggle" id="menu-toggle">☰</div>
-    
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="#contact">Contact Us</a>
-    </nav>
-  </header>
+  <!-- Hamburger icon (mobile) -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+</header>
+
 
   <!-- Hero Section -->
   <section class="hero">
@@ -90,9 +95,9 @@
 </section>
 
 <script>
+  // WhatsApp form function (unchanged)
   function sendToWhatsApp(event) {
     event.preventDefault();
-
     let name = document.getElementById("name").value;
     let phone = document.getElementById("phone").value;
     let address = document.getElementById("address").value;
@@ -100,10 +105,7 @@
     let service = document.getElementById("service").value;
     let details = document.getElementById("details").value;
 
-    // Your WhatsApp number (country code + number, no "+")
     let whatsappNumber = "233559306768"; 
-
-    // Build message
     let message = 
       " *New Delivery Request* \n\n" +
       "Name: " + name + "\n" +
@@ -113,23 +115,19 @@
       "Service Type: " + service + "\n" +
       "Package Details: " + details;
 
-    // Encode safely
     let encodedMessage = encodeURIComponent(message);
-
-    // WhatsApp URL
     let url = "https://wa.me/" + whatsappNumber + "?text=" + encodedMessage;
-
     window.open(url, "_blank").focus();
   }
 
-
-    const toggle = document.getElementById('menu-toggle');
+  // Hamburger menu toggle
+  const toggle = document.getElementById('hamburger');
   const navLinks = document.getElementById('nav-links');
 
   toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
+    toggle.classList.toggle('active'); // animate hamburger
+    navLinks.classList.toggle('active'); // show/hide nav
   });
-
 </script>
 
   <!-- Footer -->
