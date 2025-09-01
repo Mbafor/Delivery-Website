@@ -7,19 +7,24 @@
   <link rel="stylesheet" href="about.css">
 </head>
 <body>
+
   <!-- Navbar -->
-  <header class="navbar">
-    <div class="brand">Jeph Logistics</div>
+<header class="navbar">
+  <div class="brand">Jeph Logistics</div>
 
-    <!-- Hamburger (hidden on desktop, visible on mobile) -->
-    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="#contact">Contact Us</a>
-    </nav>
-  </header>
+  <!-- Hamburger icon (mobile) -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+</header>
 
   <!-- Content -->
   <div class="about-container">
