@@ -1,4 +1,4 @@
-/* Reset & Fonts */
+/* ==================== Reset & Fonts ==================== */
 * {
   margin: 0;
   padding: 0;
@@ -12,13 +12,14 @@ body {
   line-height: 1.6;
 }
 
-/* Reusable Colors & Shadows */
+/* ==================== Variables ==================== */
 :root {
   --primary-color: #f8d210;
   --text-dark: #000;
   --text-light: #fff;
-  --footer-bg:#1a1a1a;
+  --footer-bg: #1a1a1a;
   --box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  --transition: 0.3s;
 }
 
 /* ==================== Navbar ==================== */
@@ -45,7 +46,6 @@ body {
   color: var(--primary-color);
 }
 
-/* Default nav links (desktop) */
 .navbar .nav-links {
   display: flex;
   gap: 20px;
@@ -79,7 +79,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* Hero Banner */
+/* ==================== About Hero ==================== */
 .about-hero {
   width: 100%;
   height: 60vh;
@@ -111,14 +111,13 @@ body {
   z-index: 1;
 }
 
-/* Container */
+/* ==================== Container & Sections ==================== */
 .about-container {
   max-width: 1100px;
   margin: auto;
   padding: 40px 20px;
 }
 
-/* Sections */
 .section {
   margin: 60px 0;
 }
@@ -218,7 +217,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Footer */
+/* ==================== Footer ==================== */
 .footer {
   background-color: var(--footer-bg);
   color: #ddd;
@@ -253,7 +252,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* ==================== Responsive Styles ==================== */
+/* ==================== Responsive ==================== */
 
 /* Tablets */
 @media (max-width: 1024px) {
@@ -263,7 +262,7 @@ body {
 
 /* Mobile */
 @media (max-width: 768px) {
-  /* Show hamburger, hide nav by default */
+  /* Hamburger visible, nav hidden by default */
   .hamburger {
     display: flex;
   }
@@ -284,8 +283,11 @@ body {
     display: flex;
   }
 
+  /* About Hero adjustments */
   .about-hero { height: 50vh; }
   .about-hero h1 { font-size: 2rem; padding: 12px 20px; }
+
+  /* Sections adjustments */
   .section h2 { font-size: 1.8rem; }
   .mission-vision { grid-template-columns: 1fr; }
   .cta-section { padding: 30px 20px; }
@@ -305,3 +307,4 @@ body {
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+
