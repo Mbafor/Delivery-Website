@@ -108,6 +108,17 @@
     </div>
   </div>
 
+  <script>
+    // Hamburger menu toggle
+  const toggle = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active'); // animate hamburger
+    navLinks.classList.toggle('active'); // show/hide nav
+  });
+  </script>
+
   <!-- Footer -->
   <footer class="footer" id="contact">
     <div class="footer-grid">
