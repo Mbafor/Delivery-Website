@@ -152,10 +152,30 @@
   </footer>
 
   <!-- Script for toggle -->
-  <script>
-    function toggleMenu() {
-      document.querySelector('.nav-links').classList.toggle('active');
-    }
-  </script>
+<script>
+  (function () {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    if (!hamburger || !navLinks) return;
+
+    // Toggle on click
+    hamburger.addEventListener('click', function () {
+      const isActive = hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active', isActive);
+      // accessibility attribute (optional but recommended)
+      hamburger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+    });
+
+    // Close mobile menu if the window is resized to desktop width
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 768) {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        hamburger.removeAttribute('aria-expanded');
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>
