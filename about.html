@@ -141,14 +141,15 @@
   </footer>
 
   <!-- Script for hamburger toggle -->
-  <script>
-    // Hamburger menu toggle
-    const toggle = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+ <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
 
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('active'); // animate hamburger
-      navLinks.classList.toggle('active'); // show/hide nav
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active'); // animate hamburger
+        navLinks.classList.toggle('active'); // show/hide nav
+      });
     });
   </script>
 </body>
