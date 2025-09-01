@@ -11,6 +11,10 @@
   <!-- Navbar -->
   <header class="navbar">
     <div class="brand">Jeph Logistics</div>
+
+      <!-- Hamburger icon (mobile) -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+    
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -117,7 +121,25 @@
 
     window.open(url, "_blank").focus();
   }
+
+
+    const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
 </script>
+
+
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+
 
   <!-- Footer -->
 <footer class="footer" id="contact">
