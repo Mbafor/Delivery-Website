@@ -118,7 +118,7 @@ body {
 .hero button,
 .hero a {
   display: inline-block;
-  width: 200px; /* fixed width for consistency */
+  height: 30px; /* fixed width for consistency */
   padding: 12px 25px;
   border: none;
   background: var(--primary-color);
