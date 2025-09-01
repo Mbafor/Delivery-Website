@@ -101,7 +101,7 @@ body {
   padding: 12px 25px;
   border: none;
   background: var(--primary-color);
-  color: white;
+  color: var(--text-dark);
   font-size: 1rem;
   font-weight: 1.5rem;
   border-radius: 5px;
