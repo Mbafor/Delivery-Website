@@ -118,18 +118,21 @@ body {
 .hero button,
 .hero a {
   display: inline-block;
+  width: 200px; /* fixed width for consistency */
   padding: 12px 25px;
   border: none;
   background: var(--primary-color);
   color: var(--text-dark);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none; /* makes links look like buttons */
+  text-align: center; /* centers the text */
   transition: background var(--transition), transform 0.2s;
-  margin: 5px; /* small gap between buttons */
+  margin: 7px; 
 }
+
 
 .hero button:hover,
 .hero a:hover {
