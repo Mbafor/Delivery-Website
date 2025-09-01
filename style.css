@@ -118,14 +118,14 @@ body {
 .hero button,
 .hero a {
   display: inline-block;
-  width: 200px;         /* consistent width */
-  height: 50px;         /* fixed height */
-  line-height: 50px;    /* vertically centers text for <a> */
+  width: 200px;        
+  height: 50px;        
+  line-height: 50px;   
   border: none;
   background: var(--primary-color);
   color: var(--text-dark);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 5px;
   cursor: pointer;
   text-decoration: none; /* removes underline for <a> */
