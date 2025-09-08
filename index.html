@@ -8,6 +8,7 @@
 </head>
 <body>
 
+<<<<<<< HEAD
   <!-- Navbar -->
   <header class="navbar">
     <div class="brand">JephLink</div>
@@ -17,6 +18,26 @@
       <a href="#contact">Contact Us</a>
     </nav>
   </header>
+=======
+<!-- Navbar -->
+<header class="navbar">
+  <div class="brand">Jeph Logistics</div>
+
+  <!-- Hamburger icon (mobile) -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+</header>
+
+>>>>>>> 5c6402e481ede43d644d079461a9c6c04567cd5c
 
   <!-- Hero Section -->
   <section class="hero">
@@ -26,6 +47,7 @@
       <button onclick="document.getElementById('booking').scrollIntoView({behavior: 'smooth'});">
         Book a Delivery
       </button>
+     <a href="about.html" class="about-btn">Learn More</a>
     </div>
   </section>
 
@@ -85,9 +107,9 @@
 </section>
 
 <script>
+  // WhatsApp form function (unchanged)
   function sendToWhatsApp(event) {
     event.preventDefault();
-
     let name = document.getElementById("name").value;
     let phone = document.getElementById("phone").value;
     let address = document.getElementById("address").value;
@@ -95,10 +117,7 @@
     let service = document.getElementById("service").value;
     let details = document.getElementById("details").value;
 
-    // Your WhatsApp number (country code + number, no "+")
     let whatsappNumber = "233559306768"; 
-
-    // Build message
     let message = 
       " *New Delivery Request* \n\n" +
       "Name: " + name + "\n" +
@@ -108,14 +127,19 @@
       "Service Type: " + service + "\n" +
       "Package Details: " + details;
 
-    // Encode safely
     let encodedMessage = encodeURIComponent(message);
-
-    // WhatsApp URL
     let url = "https://wa.me/" + whatsappNumber + "?text=" + encodedMessage;
-
     window.open(url, "_blank").focus();
   }
+
+  // Hamburger menu toggle
+  const toggle = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active'); // animate hamburger
+    navLinks.classList.toggle('active'); // show/hide nav
+  });
 </script>
 
   <!-- Footer -->
@@ -132,15 +156,14 @@
     <!-- Contact Info -->
     <div>
       <h3>Contact</h3>
-      <p>📞 <a href="tel:+233245447334">024 544 7334</a></p>
-      <p>💬 <a href="https://wa.me/233559306768" target="_blank">Chat on WhatsApp</a></p>
+      <p><a href="tel:+233245447334">024 544 7334</a></p>
+      <p><a href="https://wa.me/233559306768" target="_blank">Chat on WhatsApp</a></p>
     </div>
 
     <!-- Social Media -->
     <div>
       <h3>Follow Us</h3>
-      <p>
-        🌍 
+      <p> 
         <a href="https://facebook.com/" target="_blank">Facebook</a> | 
         <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=pa2thu0/" target="_blank">Instagram</a> | 
         <a href="https://www.tiktok.com/@brhajeph?_t=ZM-8zL4sgwUHjU&_r=1/" target="_blank">Tiktok</a>
